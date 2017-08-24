@@ -25,11 +25,11 @@ Route::group([ 'middleware' => [ 'api' ] ], function () {
 
 		Route::post('signin', 'Auth\AuthController@signin');
 
-    });
+		Route::group([ 'middleware' => [ 'jwt.auth' ] ], function () {
+	       
+	        Route::get('user', 'UserController@index');
 
-	Route::group([ 'middleware' => [ 'jwt.auth' ] ], function () {
-       
-        Route::get('user', 'UserController@index');
+	    });
 
     });
 

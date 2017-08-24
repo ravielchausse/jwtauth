@@ -23,7 +23,7 @@ Route::group([ 'middleware' => [ 'api' ] ], function () {
 
 		Route::post('register', 'Auth\AuthController@register');
 
-		Route::post('signin', 'Auth\AuthController@register');
+		Route::post('signin', 'Auth\AuthController@signin');
 
     });
 

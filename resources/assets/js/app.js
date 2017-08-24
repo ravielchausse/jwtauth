@@ -25,9 +25,19 @@ export var router = new VueRouter({
             component: Home
         },
         {
+            path: '/dashboard',
+            name: 'dashboard',
+            component: Dashboard
+        },
+        {
             path: '/register',
             name: 'register',
             component: Register
+        },
+        {
+            path: '/signin',
+            name: 'signin',
+            component: Signin
         }
     ]
 });
